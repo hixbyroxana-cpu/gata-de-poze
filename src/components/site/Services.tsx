@@ -10,7 +10,7 @@ type Service = {
 const services: Service[] = [
   {
     title: "Consultanță Online pentru Apartamente",
-    price: "de la 700 lei",
+    price: "de la 750 lei",
     badge: "Disponibilă în toată România",
     description:
       "Pentru proprietarii din orice oraș care vor recomandări clare pe baza pozelor, înainte să investească în decor, mobilier sau fotografii.",
@@ -23,6 +23,7 @@ const services: Service[] = [
       "priorități de buget",
       "sugestii pentru poze mai bune",
       "recomandări pentru anunț",
+      "raport scris cu recomandări clare și priorități de buget",
     ],
   },
   {
