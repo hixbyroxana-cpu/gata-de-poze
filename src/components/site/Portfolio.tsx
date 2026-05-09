@@ -1,5 +1,5 @@
 import bedroomBefore from "@/assets/portfolio-bedroom-before.jpg";
-import bedroomAfter from "@/assets/portfolio-bedroom.jpg";
+import bedroomAfter from "@/assets/portfolio-bedroom-after.jpg";
 import livingBefore from "@/assets/portfolio-living-before.jpg";
 import livingAfter from "@/assets/portfolio-living-after.jpg";
 import bathBefore from "@/assets/portfolio-bath-before.jpg";
