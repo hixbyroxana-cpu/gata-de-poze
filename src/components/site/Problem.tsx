@@ -14,7 +14,7 @@ export function Problem() {
       <div className="mx-auto max-w-5xl px-5 lg:px-8">
         <div className="max-w-3xl">
           <h2 className="text-3xl text-foreground sm:text-4xl lg:text-5xl">
-            Apartamentul tău poate arăta mai bine în poze
+            De ce unele apartamente nu se închiriază ușor?
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
             Multe apartamente bune nu se închiriază la adevăratul lor potențial pentru că pozele sunt întunecate, spațiul pare încărcat sau decorul nu transmite încredere. Uneori nu este nevoie de renovare completă, ci de alegeri vizuale mai bune, ordine, lumină și prezentare corectă.
