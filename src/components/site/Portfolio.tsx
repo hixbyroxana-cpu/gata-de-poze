@@ -1,9 +1,11 @@
 import bedroomBefore from "@/assets/portfolio-bedroom-before.jpg";
 import bedroomAfter from "@/assets/portfolio-bedroom.jpg";
-import livingAfter from "@/assets/portfolio-living.jpg";
+import livingBefore from "@/assets/portfolio-living-before.jpg";
+import livingAfter from "@/assets/portfolio-living-after.jpg";
 import bathBefore from "@/assets/portfolio-bath-before.jpg";
 import bathAfter from "@/assets/portfolio-bath-after.jpg";
-import kitchenAfter from "@/assets/portfolio-kitchen.jpg";
+import kitchenBefore from "@/assets/portfolio-kitchen-before.jpg";
+import kitchenAfter from "@/assets/portfolio-kitchen-after.jpg";
 import { BeforeAfterSlider } from "./BeforeAfterSlider";
 
 type Item = {
@@ -17,9 +19,9 @@ type Item = {
 
 const items: Item[] = [
   { before: bedroomBefore, after: bedroomAfter, title: "Dormitor înainte / după", city: "Sibiu", rentalType: "Booking", description: "Dormitor luminos pregătit pentru oaspeți, cu textile noi și lumină caldă." },
-  { before: livingAfter, after: livingAfter, title: "Living înainte / după", city: "Alba Iulia", rentalType: "Termen lung", description: "Living curat și aerisit, gata pentru vizionări și anunț." },
+  { before: livingBefore, after: livingAfter, title: "Living înainte / după", city: "Alba Iulia", rentalType: "Termen lung", description: "Living curat și aerisit, gata pentru vizionări și anunț." },
   { before: bathBefore, after: bathAfter, title: "Baie înainte / după", city: "Sibiu", rentalType: "Airbnb", description: "Baie reîmprospătată cu detalii simple care arată îngrijit în poze." },
-  { before: kitchenAfter, after: kitchenAfter, title: "Bucătărie înainte / după", city: "Alba Iulia", rentalType: "Booking", description: "Bucătărie ordonată, cu accente naturale și styling pentru fotografie." },
+  { before: kitchenBefore, after: kitchenAfter, title: "Bucătărie înainte / după", city: "Alba Iulia", rentalType: "Booking", description: "Bucătărie ordonată, cu accente naturale și styling pentru fotografie." },
 ];
 
 export function Portfolio() {
