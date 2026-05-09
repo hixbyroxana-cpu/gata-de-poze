@@ -13,7 +13,7 @@ const services: Service[] = [
     price: "de la 750 lei",
     badge: "Disponibilă în toată România",
     description:
-      "Pentru proprietarii din orice oraș care vor recomandări clare pe baza pozelor, înainte să investească în decor, mobilier sau fotografii.",
+      "Pentru proprietarii din orice oraș care vor recomandări clare pe baza pozelor, înainte să investească în decor, mobilier sau fotografii. Primești un raport scris cu recomandări clare, priorități de buget și sugestii pentru poze și anunț.",
     items: [
       "analiză poze apartament",
       "ce trebuie scos",
@@ -129,12 +129,14 @@ export function Services() {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#contact"
-                className="mt-7 inline-flex items-center justify-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
-              >
-                Solicită acest pachet
-              </a>
+              <div className="mt-auto pt-7">
+                <a
+                  href="#contact"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-primary/20 bg-primary/5 px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground hover:shadow-card"
+                >
+                  Solicită acest pachet
+                </a>
+              </div>
             </article>
           ))}
         </div>

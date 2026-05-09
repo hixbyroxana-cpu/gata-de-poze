@@ -8,11 +8,11 @@ export function Hero() {
           <span className="inline-flex items-center rounded-full border border-border bg-background/60 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground">
             Styling • Poze • Consultanță
           </span>
-          <h1 className="font-serif text-4xl leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
-            Pregătește apartamentul pentru închiriere — frumos, luminos și gata de poze
+          <h1 className="font-serif text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+            Apartamentul tău, pregătit pentru poze și închiriere
           </h1>
           <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Ajut proprietarii din Sibiu și Alba să pregătească apartamentele pentru poze, anunțuri și închiriere. Local ofer styling, refresh decorativ și fotografii, iar online ofer consultanță pentru proprietari din toată România.
+            Styling, poze, refresh decorativ și consultanță pentru proprietari care vor să își prezinte apartamentul mai bine — local în Sibiu și Alba Iulia, online în toată România.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
