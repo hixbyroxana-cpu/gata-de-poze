@@ -72,20 +72,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Pregătire apartamente pentru închiriere în Sibiu și Alba | Styling, poze și consultanță online" },
+      { name: "description", content: "Servicii de styling, refresh decorativ, fotografii și pregătire anunțuri pentru apartamente de închiriat în Sibiu și Alba Iulia. Consultanță online pentru proprietari din toată România." },
+      { name: "author", content: "Gata de Închiriat" },
+      { property: "og:title", content: "Gata de Închiriat — styling și pregătire apartamente pentru închiriere" },
+      { property: "og:description", content: "Styling, refresh decorativ, fotografii și consultanță pentru apartamente pregătite de închiriere. Sibiu, Alba Iulia și online în toată România." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -96,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="ro">
       <head>
         <HeadContent />
       </head>
