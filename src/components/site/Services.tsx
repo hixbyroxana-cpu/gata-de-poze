@@ -13,7 +13,7 @@ const services: Service[] = [
     price: "de la 750 lei",
     badge: "Disponibilă în toată România",
     description:
-      "Pentru proprietarii din orice oraș care vor recomandări clare pe baza pozelor, înainte să investească în decor, mobilier sau fotografii.",
+      "Pentru proprietarii din orice oraș care vor recomandări clare pe baza pozelor, înainte să investească în decor, mobilier sau fotografii. Primești un raport scris cu recomandări clare, priorități de buget și sugestii pentru poze și anunț.",
     items: [
       "analiză poze apartament",
       "ce trebuie scos",
