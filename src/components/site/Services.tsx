@@ -28,7 +28,7 @@ const services: Service[] = [
   },
   {
     title: "Vizită Diagnostic",
-    price: "de la 400 lei",
+    price: "de la 500 lei",
     badge: "Sibiu & Alba",
     description:
       "Pentru proprietarii care vor să știe ce trebuie schimbat înainte să investească.",
