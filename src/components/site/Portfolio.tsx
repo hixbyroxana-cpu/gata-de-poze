@@ -1,12 +1,14 @@
-import bedroom from "@/assets/portfolio-bedroom.jpg";
-import living from "@/assets/portfolio-living.jpg";
-import bath from "@/assets/portfolio-bath.jpg";
-import kitchen from "@/assets/portfolio-kitchen.jpg";
-import airbnb from "@/assets/portfolio-airbnb.jpg";
-import longterm from "@/assets/portfolio-longterm.jpg";
+import bedroomBefore from "@/assets/portfolio-bedroom-before.jpg";
+import bedroomAfter from "@/assets/portfolio-bedroom.jpg";
+import livingAfter from "@/assets/portfolio-living.jpg";
+import bathBefore from "@/assets/portfolio-bath-before.jpg";
+import bathAfter from "@/assets/portfolio-bath-after.jpg";
+import kitchenAfter from "@/assets/portfolio-kitchen.jpg";
+import { BeforeAfterSlider } from "./BeforeAfterSlider";
 
 type Item = {
-  image: string;
+  before: string;
+  after: string;
   title: string;
   city: string;
   rentalType: string;
@@ -14,12 +16,10 @@ type Item = {
 };
 
 const items: Item[] = [
-  { image: bedroom, title: "Înainte / După – Dormitor", city: "Sibiu", rentalType: "Booking", description: "Dormitor luminos pregătit pentru oaspeți, cu textile noi și lumină caldă." },
-  { image: living, title: "Înainte / După – Living", city: "Alba Iulia", rentalType: "Termen lung", description: "Living curat și aerisit, gata pentru vizionări și anunț." },
-  { image: bath, title: "Înainte / După – Baie", city: "Sibiu", rentalType: "Airbnb", description: "Baie reîmprospătată cu detalii simple care arată îngrijit în poze." },
-  { image: kitchen, title: "Înainte / După – Bucătărie", city: "Alba Iulia", rentalType: "Booking", description: "Bucătărie ordonată, cu accente naturale și styling pentru fotografie." },
-  { image: airbnb, title: "Apartament pentru Booking", city: "Sibiu", rentalType: "Regim hotelier", description: "Atmosferă caldă, detalii fotogenice și colțuri pregătite pentru oaspeți." },
-  { image: longterm, title: "Apartament pentru chirie pe termen lung", city: "Alba Iulia", rentalType: "Termen lung", description: "Aspect neutru și modern, ușor de locuit, atractiv pentru chiriași serioși." },
+  { before: bedroomBefore, after: bedroomAfter, title: "Dormitor înainte / după", city: "Sibiu", rentalType: "Booking", description: "Dormitor luminos pregătit pentru oaspeți, cu textile noi și lumină caldă." },
+  { before: livingAfter, after: livingAfter, title: "Living înainte / după", city: "Alba Iulia", rentalType: "Termen lung", description: "Living curat și aerisit, gata pentru vizionări și anunț." },
+  { before: bathBefore, after: bathAfter, title: "Baie înainte / după", city: "Sibiu", rentalType: "Airbnb", description: "Baie reîmprospătată cu detalii simple care arată îngrijit în poze." },
+  { before: kitchenAfter, after: kitchenAfter, title: "Bucătărie înainte / după", city: "Alba Iulia", rentalType: "Booking", description: "Bucătărie ordonată, cu accente naturale și styling pentru fotografie." },
 ];
 
 export function Portfolio() {
@@ -31,32 +31,25 @@ export function Portfolio() {
             Portofoliu înainte și după
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Exemplele de proiecte vor fi adăugate pe măsură ce apartamentele sunt finalizate. Secțiunea este pregătită pentru imagini înainte/după, oraș, tip de închiriere și descriere scurtă.
+            Glisează slider-ul pe fiecare imagine pentru a compara cum arăta apartamentul înainte și după pregătirea pentru poze și anunț.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {items.map((it) => (
             <article
               key={it.title}
-              className="group overflow-hidden rounded-3xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-card"
+              className="overflow-hidden rounded-3xl border border-border bg-card transition-all hover:shadow-card"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                <img
-                  src={it.image}
-                  alt={it.title}
-                  loading="lazy"
-                  width={1024}
-                  height={768}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-foreground backdrop-blur">
-                  {it.rentalType}
-                </span>
-              </div>
+              <BeforeAfterSlider
+                beforeImage={it.before}
+                afterImage={it.after}
+                beforeAlt={`${it.title} – înainte`}
+                afterAlt={`${it.title} – după`}
+              />
               <div className="p-6">
                 <h3 className="text-lg text-foreground">{it.title}</h3>
                 <p className="mt-1 text-xs uppercase tracking-wide text-muted-foreground">
-                  {it.city}
+                  {it.city} · {it.rentalType}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {it.description}
