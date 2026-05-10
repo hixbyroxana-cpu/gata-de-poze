@@ -19,7 +19,7 @@ export function Header() {
           <img
             src={logoImg}
             alt="Gata de Închiriat by HomeFix Roxana"
-            className="h-11 w-44 object-cover object-center mix-blend-multiply"
+            className="h-14 w-56 object-cover object-center mix-blend-multiply"
           />
         </a>
         <nav className="hidden items-center gap-8 lg:flex">

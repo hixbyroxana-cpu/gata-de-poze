@@ -8,7 +8,7 @@ export function Footer() {
           <img
             src={logoImg}
             alt="Gata de Închiriat by HomeFix Roxana"
-            className="h-16 w-64 object-cover object-center mix-blend-multiply"
+            className="h-20 w-80 object-cover object-center mix-blend-multiply"
           />
           <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
             Styling, refresh decorativ, poze și consultanță pentru apartamente de închiriat.
