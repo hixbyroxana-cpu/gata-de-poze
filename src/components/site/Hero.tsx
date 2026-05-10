@@ -14,6 +14,9 @@ export function Hero() {
           <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             Styling, poze, refresh decorativ și consultanță pentru proprietari care vor să își prezinte apartamentul mai bine — local în Sibiu și Alba Iulia, online în toată România.
           </p>
+          <p className="max-w-xl border-l-2 border-sage pl-4 text-sm leading-relaxed text-foreground/80 sm:text-base">
+            Fiecare apartament este diferit, așa că recomandările se adaptează bugetului disponibil. Începem cu schimbările care au cel mai mare impact în poze și în prima impresie.
+          </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="#contact"
