@@ -7,6 +7,27 @@ export function Footer() {
           <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
             Styling, refresh decorativ, poze și consultanță pentru apartamente de închiriat.
           </p>
+          <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
+            Pentru transformări, proiecte before/after și idei practice pentru casă, urmărește{" "}
+            <a
+              href="https://www.instagram.com/homefix_by_roxana"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-foreground underline decoration-sage/50 underline-offset-4 transition-colors hover:text-primary"
+            >
+              @homefix_by_roxana
+            </a>{" "}
+            pe Instagram sau{" "}
+            <a
+              href="https://www.youtube.com/@Homefixbyroxana"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-foreground underline decoration-sage/50 underline-offset-4 transition-colors hover:text-primary"
+            >
+              Homefix By Roxana
+            </a>{" "}
+            pe YouTube.
+          </p>
         </div>
         <div>
           <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Local</p>
