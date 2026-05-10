@@ -9,40 +9,34 @@ type Service = {
 
 const services: Service[] = [
   {
-    title: "Consultanță Online pentru Apartamente",
+    title: "Consultanță Vizuală Online",
     price: "de la 500 lei",
     badge: "Disponibilă în toată România",
     description:
-      "Pentru proprietarii din orice oraș care vor recomandări clare pe baza pozelor, înainte să investească în decor, mobilier sau fotografii.",
+      "Pentru proprietarii din orice oraș care vor idei clare și o direcție vizuală înainte să investească.",
     items: [
       "analiză poze apartament",
-      "raport scurt cu recomandări clare",
-      "ce trebuie scos",
-      "ce trebuie schimbat",
-      "ce lipsește",
-      "5–10 recomandări principale",
+      "raport scurt cu recomandări",
+      "ce trebuie scos, schimbat sau adăugat",
       "priorități de buget",
-      "sugestii pentru poze mai bune",
-      "recomandări pentru anunț",
+      "sugestii pentru poze și anunț",
+      "2–4 imagini demonstrative",
     ],
   },
   {
-    title: "Vizită Diagnostic",
-    price: "de la 750 lei",
-    badge: "Sibiu, Alba Iulia & împrejurimi",
+    title: "Plan de Refresh + Listă de Cumpărături",
+    price: "de la 1.200 lei",
+    badge: "Plan etapizat",
     description:
-      "Pentru proprietarii din Sibiu, Alba Iulia și împrejurimi care vor o evaluare la fața locului înainte să investească.",
+      "Pentru proprietarii care vor să știe exact ce să cumpere și cum să transforme apartamentul etapizat.",
     items: [
-      "vizită la apartament",
-      "discuție la fața locului",
-      "raport scurt cu recomandări principale",
-      "recomandări pentru fiecare zonă",
-      "ce trebuie scos",
-      "ce trebuie reparat",
-      "ce se poate păstra",
-      "ce merită cumpărat",
-      "priorități de buget",
-      "sugestii pentru poze și vizionări",
+      "analiză completă",
+      "raport detaliat",
+      "4–8 imagini demonstrative",
+      "direcție de stil și paletă de culori",
+      "listă de cumpărături",
+      "linkuri către produse recomandate",
+      "priorități: esențial, opțional, premium",
     ],
   },
   {
@@ -50,11 +44,12 @@ const services: Service[] = [
     price: "de la 1.500 lei",
     badge: "Cel mai practic",
     description:
-      "Pentru apartamente care sunt aproape gata, dar au nevoie să arate mai bine în poze.",
+      "Pentru apartamente aproape gata, care au nevoie de styling, ordine și poze mai bune.",
     items: [
-      "aranjarea apartamentului pentru fotografiere",
-      "eliminarea obiectelor care încarcă spațiul",
+      "vizită la apartament",
       "styling cu ce există deja",
+      "eliminarea obiectelor care încarcă spațiul",
+      "pregătire pentru fotografiere",
       "fotografii luminoase pentru anunț",
       "editare de bază",
       "ordine recomandată a pozelor",
@@ -63,18 +58,18 @@ const services: Service[] = [
     highlight: true,
   },
   {
-    title: "Refresh Complet",
-    price: "de la 2.500 lei + buget produse",
+    title: "Refresh Complet la Fața Locului",
+    price: "de la 3.500 lei + buget produse",
     badge: "Pentru schimbări vizibile",
     description:
-      "Pentru apartamente care au nevoie de schimbări mai clare înainte de listare.",
+      "Pentru proprietarii din Sibiu, Alba Iulia și împrejurimi care vor ca apartamentul să fie pregătit complet pentru poze, anunțuri sau vizionări.",
     items: [
-      "plan de refresh decorativ",
+      "plan vizual de refresh",
       "listă de cumpărături",
-      "recomandări de culori, textile, lumină și decor",
-      "styling final",
-      "fotografii pentru anunț",
-      "text pentru Booking, Airbnb, OLX sau Imobiliare",
+      "ajutor cu selecția produselor",
+      "styling și decorare la fața locului",
+      "pregătire finală pentru poze",
+      "recomandări pentru anunț",
       "checklist de pregătire pentru oaspeți sau vizionări",
     ],
   },
@@ -87,7 +82,7 @@ export function Services() {
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl text-foreground sm:text-4xl lg:text-5xl">Servicii</h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Alege varianta potrivită în funcție de stadiul apartamentului: consultanță online, vizită diagnostic, styling pentru poze sau refresh complet.
+            Alege varianta potrivită în funcție de stadiul apartamentului: direcție vizuală, plan de refresh, styling pentru poze sau pregătire completă la fața locului.
           </p>
         </div>
         <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -144,7 +139,10 @@ export function Services() {
           ))}
         </div>
         <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
-          Prețurile nu includ produsele, mobilierul, materialele, transportul sau manopera altor furnizori. Acestea se stabilesc separat, în funcție de apartament și buget.
+          Imaginile demonstrative sunt orientative și ilustrează direcția propusă de styling, decor și rearanjare. Produsele, mobilierul, materialele, transportul și manopera altor furnizori se achită separat.
+        </p>
+        <p className="mx-auto mt-3 max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
+          La cerere, pot ajuta și cu selecția sau comandarea produselor, pe baza unui buget aprobat în prealabil.
         </p>
       </div>
     </section>
