@@ -3,10 +3,10 @@ import { useState, type FormEvent } from "react";
 const propertyTypes = ["garsonieră", "apartament", "casă", "pensiune mică"];
 const rentalTypes = ["Booking/Airbnb", "termen lung", "încă nu știu"];
 const serviceWanted = [
-  "consultanță online",
-  "vizită diagnostic",
-  "styling + poze",
-  "refresh complet",
+  "Consultanță Vizuală Online",
+  "Plan de Refresh + Listă de Cumpărături",
+  "Styling + Poze pentru Anunț",
+  "Refresh Complet la Fața Locului",
   "nu știu încă",
 ];
 
@@ -16,10 +16,35 @@ const labelClass = "block text-sm font-medium text-foreground";
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json().catch(() => null);
+      if (!response.ok) {
+        throw new Error(data?.error || "Nu am putut trimite mesajul. Te rog încearcă din nou.");
+      }
+      form.reset();
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Nu am putut trimite mesajul. Te rog încearcă din nou.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -56,37 +81,38 @@ export function Contact() {
             </div>
           ) : (
             <form onSubmit={onSubmit} className="space-y-5">
+              <input name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <label className={labelClass} htmlFor="nume">Nume</label>
-                  <input id="nume" required className={fieldClass} placeholder="Numele tău" />
+                  <input id="nume" name="nume" required className={fieldClass} placeholder="Numele tău" />
                 </div>
                 <div className="space-y-2">
                   <label className={labelClass} htmlFor="telefon">Telefon</label>
-                  <input id="telefon" type="tel" required className={fieldClass} placeholder="07xx xxx xxx" />
+                  <input id="telefon" name="telefon" type="tel" required className={fieldClass} placeholder="07xx xxx xxx" />
                 </div>
               </div>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <label className={labelClass} htmlFor="email">Email</label>
-                  <input id="email" type="email" required className={fieldClass} placeholder="email@exemplu.ro" />
+                  <input id="email" name="email" type="email" required className={fieldClass} placeholder="email@exemplu.ro" />
                 </div>
                 <div className="space-y-2">
                   <label className={labelClass} htmlFor="oras">Oraș</label>
-                  <input id="oras" required className={fieldClass} placeholder="Sibiu, Alba Iulia, ..." />
+                  <input id="oras" name="oras" required className={fieldClass} placeholder="Sibiu, Alba Iulia, ..." />
                 </div>
               </div>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <label className={labelClass} htmlFor="tipProprietate">Tip proprietate</label>
-                  <select id="tipProprietate" className={fieldClass} defaultValue="">
+                  <select id="tipProprietate" name="tipProprietate" className={fieldClass} defaultValue="">
                     <option value="" disabled>Alege...</option>
                     {propertyTypes.map((t) => <option key={t}>{t}</option>)}
                   </select>
                 </div>
                 <div className="space-y-2">
                   <label className={labelClass} htmlFor="tipInchiriere">Tip închiriere</label>
-                  <select id="tipInchiriere" className={fieldClass} defaultValue="">
+                  <select id="tipInchiriere" name="tipInchiriere" className={fieldClass} defaultValue="">
                     <option value="" disabled>Alege...</option>
                     {rentalTypes.map((t) => <option key={t}>{t}</option>)}
                   </select>
@@ -94,7 +120,7 @@ export function Contact() {
               </div>
               <div className="space-y-2">
                 <label className={labelClass} htmlFor="serviciu">Serviciu dorit</label>
-                <select id="serviciu" className={fieldClass} defaultValue="">
+                <select id="serviciu" name="serviciu" className={fieldClass} defaultValue="">
                   <option value="" disabled>Alege...</option>
                   {serviceWanted.map((t) => <option key={t}>{t}</option>)}
                 </select>
@@ -113,18 +139,24 @@ export function Contact() {
                 </div>
                 <div className="space-y-2">
                   <label className={labelClass} htmlFor="buget">Buget estimativ pentru schimbări</label>
-                  <input id="buget" className={fieldClass} placeholder="ex: 2.000 lei" />
+                  <input id="buget" name="buget" className={fieldClass} placeholder="ex: 2.000 lei" />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className={labelClass} htmlFor="mesaj">Mesaj</label>
-                <textarea id="mesaj" rows={4} className={fieldClass} placeholder="Spune-mi câteva detalii despre apartament..." />
+                <textarea id="mesaj" name="mesaj" rows={4} className={fieldClass} placeholder="Spune-mi câteva detalii despre apartament..." />
               </div>
+              {error && (
+                <p className="rounded-xl border border-terracotta/30 bg-terracotta/10 px-4 py-3 text-sm text-foreground">
+                  {error}
+                </p>
+              )}
               <button
                 type="submit"
+                disabled={submitting}
                 className="w-full rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-all hover:opacity-90 hover:shadow-card"
               >
-                Trimite cererea
+                {submitting ? "Se trimite..." : "Trimite cererea"}
               </button>
             </form>
           )}
