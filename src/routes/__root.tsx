@@ -72,6 +72,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "google-site-verification", content: "ZA9YpLdM9E2rn6OSwdDQrX7yHWOtLpndAKwbvhTR8LE" },
       { title: "Pregătire apartamente pentru închiriere în Sibiu și Alba | Styling, poze și consultanță online" },
       { name: "description", content: "Servicii de styling, refresh decorativ, fotografii și pregătire anunțuri pentru apartamente de închiriat în Sibiu și Alba Iulia. Consultanță online pentru proprietari din toată România." },
       { name: "author", content: "Gata de Închiriat" },
