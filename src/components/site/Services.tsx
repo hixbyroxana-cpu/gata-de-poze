@@ -10,36 +10,39 @@ type Service = {
 const services: Service[] = [
   {
     title: "Consultanță Online pentru Apartamente",
-    price: "de la 750 lei",
+    price: "de la 500 lei",
     badge: "Disponibilă în toată România",
     description:
-      "Pentru proprietarii din orice oraș care vor recomandări clare pe baza pozelor, înainte să investească în decor, mobilier sau fotografii. Primești un raport scris cu recomandări clare, priorități de buget și sugestii pentru poze și anunț.",
+      "Pentru proprietarii din orice oraș care vor recomandări clare pe baza pozelor, înainte să investească în decor, mobilier sau fotografii.",
     items: [
       "analiză poze apartament",
+      "raport scurt cu recomandări clare",
       "ce trebuie scos",
       "ce trebuie schimbat",
       "ce lipsește",
-      "recomandări de culori, textile, lumină și decor",
+      "5–10 recomandări principale",
       "priorități de buget",
       "sugestii pentru poze mai bune",
       "recomandări pentru anunț",
-      "raport scris cu recomandări clare și priorități de buget",
     ],
   },
   {
     title: "Vizită Diagnostic",
-    price: "de la 500 lei",
-    badge: "Sibiu & Alba",
+    price: "de la 750 lei",
+    badge: "Sibiu, Alba Iulia & împrejurimi",
     description:
-      "Pentru proprietarii care vor să știe ce trebuie schimbat înainte să investească.",
+      "Pentru proprietarii din Sibiu, Alba Iulia și împrejurimi care vor o evaluare la fața locului înainte să investească.",
     items: [
       "vizită la apartament",
-      "recomandări clare",
+      "discuție la fața locului",
+      "raport scurt cu recomandări principale",
+      "recomandări pentru fiecare zonă",
       "ce trebuie scos",
       "ce trebuie reparat",
+      "ce se poate păstra",
       "ce merită cumpărat",
       "priorități de buget",
-      "sumar cu recomandări principale",
+      "sugestii pentru poze și vizionări",
     ],
   },
   {
