@@ -1,9 +1,15 @@
+import logoImg from "@/assets/gata-de-inchiriat-logo.png";
+
 export function Footer() {
   return (
     <footer className="border-t border-border bg-cream py-14">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[1.5fr_1fr_1fr] lg:px-8">
         <div>
-          <p className="font-serif text-2xl text-foreground">Gata de Închiriat</p>
+          <img
+            src={logoImg}
+            alt="Gata de Închiriat by HomeFix Roxana"
+            className="h-16 w-64 object-cover object-center mix-blend-multiply"
+          />
           <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
             Styling, refresh decorativ, poze și consultanță pentru apartamente de închiriat.
           </p>

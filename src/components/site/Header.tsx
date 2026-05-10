@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logoImg from "@/assets/gata-de-inchiriat-logo.png";
 
 const links = [
   { href: "#servicii", label: "Servicii" },
@@ -14,8 +15,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <a href="#top" className="font-serif text-xl tracking-tight text-foreground">
-          Gata de Închiriat
+        <a href="#top" className="block overflow-hidden rounded-sm" aria-label="Gata de Închiriat">
+          <img
+            src={logoImg}
+            alt="Gata de Închiriat by HomeFix Roxana"
+            className="h-11 w-44 object-cover object-center mix-blend-multiply"
+          />
         </a>
         <nav className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
